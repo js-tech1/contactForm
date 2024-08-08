@@ -14,14 +14,14 @@ function handleSubmit(event) {
 
     // Prepare the data to be sent in the POST request
     const body = {
-        gmail: "jj4770911@gmail.com",
-        password: "imsutsjjokxzdalx",
-        to: "jj4770911@gmail.com",
+        gmail: "YOUR_GMAIL",
+        password: "YOUR_GMAIL_APP_PASSWORD",
+        to: "SENDER_MAIL", //where you want to send mail
         text: name,
         subject: subject,
         message: message
     };
-    
+
 
     var submitButton = document.querySelector('.submitting');
     var waitText = 'Submitting...';
@@ -34,7 +34,7 @@ function handleSubmit(event) {
         headers: {
             'Content-Type': 'application/json',
             'x-rapidapi-host': 'email-api11.p.rapidapi.com',
-            'x-rapidapi-key': '0ec2297366msh2c6f637b7149b14p160923jsn807593f80a3e'
+            'x-rapidapi-key': 'YOUR_API_KEY'
         },
         body: JSON.stringify(body),
     })
